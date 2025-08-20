@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Tetris - Endless Block Stacking Fun!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="game-board">
+        <div class="grid" id="gameGrid"></div>
+        <div class="game-over-overlay" id="gameOverOverlay">
+          <div class="game-over-text">GAME OVER</div>
+          <button onclick="resetGame()">Play Again</button>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <div class="info-box">
+          <h2>Score</h2>
+          <div class="score-display" id="scoreDisplay">0</div>
+          <div>Level: <span id="levelDisplay">1</span></div>
+          <div>Lines: <span id="linesDisplay">0</span></div>
+        </div>
+
+        <div class="info-box">
+          <h2>Next Piece</h2>
+          <div class="next-piece" id="nextPiece"></div>
+        </div>
+
+        <div class="info-box">
+          <h2>Controls</h2>
+          <div class="controls">
+            <div class="control-item">
+              <span>Move Left</span>
+              <span class="key">←</span>
+            </div>
+            <div class="control-item">
+              <span>Move Right</span>
+              <span class="key">→</span>
+            </div>
+            <div class="control-item">
+              <span>Rotate</span>
+              <span class="key">↑</span>
+            </div>
+            <div class="control-item">
+              <span>Soft Drop</span>
+              <span class="key">↓</span>
+            </div>
+            <div class="control-item">
+              <span>Hard Drop</span>
+              <span class="key">Space</span>
+            </div>
+            <div class="control-item">
+              <span>Pause</span>
+              <span class="key">P</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="togglePause()">Pause Game</button>
+      </div>
+    </div>
+
+    <div class="sound-toggle" id="soundToggle" onclick="toggleSound()">🔊</div>
+    <script src="script.js"></script>
+  </body>
+</html>
